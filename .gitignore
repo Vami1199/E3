@@ -11,3 +11,8 @@ target/
 .idea/
 *.jar
 repository/
+.metadata/
+.recommenders/
+RemoteSystemsTempFiles/
+repository/
+Servers/
