@@ -89,4 +89,22 @@ public class JedisClientPool implements JedisClient {
 		return result;
 	}
 
+	@Override
+	public Boolean hexists(String key, String field) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<String> hvals(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Long del(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
