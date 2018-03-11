@@ -5,7 +5,9 @@ import java.util.List;
 
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.util.DigestUtils;
+
 
 import cn.e3mall.common.utils.E3Result;
 import cn.e3mall.mapper.TbUserMapper;
@@ -18,6 +20,7 @@ import cn.e3mall.sso.service.RegisterService;
  * @author DXJ
  *
  */
+@Service
 public class RegisterServiceImpl implements RegisterService {
 
 	@Autowired
