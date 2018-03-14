@@ -3,10 +3,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>cn.e3mall</groupId>
-		<artifactId>e3-content</artifactId>
+		<artifactId>e3-cart</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>e3-content-interface</artifactId>
+	<artifactId>e3-cart-interface</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>cn.e3mall</groupId>
