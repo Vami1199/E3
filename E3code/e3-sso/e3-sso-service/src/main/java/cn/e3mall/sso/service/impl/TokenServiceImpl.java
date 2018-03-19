@@ -34,7 +34,6 @@ public class TokenServiceImpl implements TokenService {
 		jedisClient.expire("SESSION:"+token, SESSION_EXPIRE);
 		//返回结果，E3Result中包含TbUser
 		TbUser user = JsonUtils.jsonToPojo(json, TbUser.class);
-		
 		return E3Result.ok(user);
 	}
 

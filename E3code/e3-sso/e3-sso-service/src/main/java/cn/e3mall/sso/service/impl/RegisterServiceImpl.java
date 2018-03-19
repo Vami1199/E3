@@ -51,7 +51,7 @@ public class RegisterServiceImpl implements RegisterService {
 	}
 	
 	@Override
-	public E3Result RegisterService(TbUser user) {
+	public E3Result register(TbUser user) {
 		 //校验数据有效性
 		if (StringUtils.isBlank(user.getUsername()) || StringUtils.isBlank(user.getPhone()) 
 				|| StringUtils.isBlank(user.getPassword())) {

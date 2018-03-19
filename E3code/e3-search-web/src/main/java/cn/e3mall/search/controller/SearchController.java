@@ -28,7 +28,7 @@ public class SearchController {
 		model.addAttribute("recourdCount", searchResult.getRecordCount());
 		model.addAttribute("itemList",searchResult.getItemList());
 		//测试异常
-		int a = 1/0;
+	//	int a = 1/0;
 		//返回逻辑视图
 		return "search";
 	}

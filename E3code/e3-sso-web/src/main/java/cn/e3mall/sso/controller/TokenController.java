@@ -42,13 +42,13 @@ public class TokenController {
 	//spring4.1之后可使用以下方法,不用手动拼串
 	@RequestMapping(value="/user/token/{token}")
 	@ResponseBody
-	public Object getuserByToken(@PathVariable String token,String callbacak){
+	public Object getuserByToken(@PathVariable String token,String callback){
 		E3Result result = tokenService.getUserByToken(token);
-		if (StringUtils.isNoneBlank(callbacak)) {
+		if (StringUtils.isNotBlank(callback)) {
 			//把结果封装成一个jsonp请求
 			MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(result);
 			//设置jsonp方法为callback
-			mappingJacksonValue.setJsonpFunction(callbacak);
+			mappingJacksonValue.setJsonpFunction(callback);
 			return mappingJacksonValue;
 		}
 		return result;

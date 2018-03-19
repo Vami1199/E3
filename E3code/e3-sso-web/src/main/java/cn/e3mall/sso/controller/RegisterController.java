@@ -37,7 +37,7 @@ public class RegisterController {
 	@RequestMapping(value = "/user/register",method=RequestMethod.POST)
 	@ResponseBody
 	public E3Result register(TbUser user){
-		E3Result e3Result = registerService.RegisterService(user);
+		E3Result e3Result = registerService.register(user);
 		return e3Result;
 	}
 }

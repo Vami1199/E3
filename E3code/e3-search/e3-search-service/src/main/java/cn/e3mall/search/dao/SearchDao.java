@@ -45,8 +45,8 @@ public class SearchDao {
 			} else {
 				title = (String) solrDocument.get("item_title");
 			}
-			item.setTitle((String) solrDocument.get("item_title"));
-			
+			item.setTitle(title);
+			//添加到商品列表
 			itemList.add(item);
 		}
 		result.setItemList(itemList);

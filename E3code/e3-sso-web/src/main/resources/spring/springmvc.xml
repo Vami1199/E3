@@ -21,7 +21,7 @@
 	<!-- 资源映射 -->
 	<mvc:resources location="/css/" mapping="/css/**"/>
 	<mvc:resources location="/js/" mapping="/js/**"/>
-	<mvc:resources location="/image/" mapping="/images/**"/>
+	<mvc:resources location="/images/" mapping="/images/**"/>
 	<!-- 引用dubbo服务 -->
 	<dubbo:application name="e3-sso-web"/>
 	<dubbo:registry protocol="zookeeper" address="192.168.25.130:2181"/>	

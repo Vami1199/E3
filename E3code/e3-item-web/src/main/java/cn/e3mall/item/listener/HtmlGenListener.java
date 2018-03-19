@@ -48,7 +48,7 @@ public class HtmlGenListener implements MessageListener {
 			TbItem tbItem = itemService.getItemById(itemId);
 			Item item = new Item(tbItem);
 			//取商品描述
-			TbItemDesc itemDesc = itemService.geTbItemDesc(itemId);
+			TbItemDesc itemDesc = itemService.getItemDescById(itemId);
 			//创建一个数据集，把商品数据封装
 			Map data = new HashMap<>();
 			data.put("item", item);
