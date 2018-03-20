@@ -30,7 +30,7 @@ public class TokenController {
 	public String getUserByToken(@PathVariable String token,String callback){
 		E3Result result = tokenService.getUserByToken(token);
 		//响应结果之前，要先判断是否为jsonp形式，即判断callback是否有数据
-		if (StringUtils.isNoneBlank(callback)) {
+		if (StringUtils.isNotBlank(callback)) {
 			//callback不为空，则是jsonp请求
 			//把结果封装成一个js语句响应
 			return callback  + "(" + JsonUtils.objectToJson(result) + ");";
