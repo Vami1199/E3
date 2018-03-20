@@ -6,13 +6,11 @@ import java.util.Map;
 
 import org.apache.solr.client.solrj.SolrQuery;
 import org.apache.solr.client.solrj.SolrServer;
-import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import cn.e3mall.common.pojo.SearchItem;
 import cn.e3mall.common.pojo.SearchResult;
@@ -46,7 +44,7 @@ public class SearchDao {
 				title = (String) solrDocument.get("item_title");
 			}
 			item.setTitle(title);
-			//Ìí¼Óµ½ÉÌÆ·ÁÐ±í
+			//ï¿½ï¿½Óµï¿½ï¿½ï¿½Æ·ï¿½Ð±ï¿½
 			itemList.add(item);
 		}
 		result.setItemList(itemList);
