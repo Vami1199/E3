@@ -138,7 +138,7 @@
 					if (data.status == 200) {
 						jAlert('登录成功！',"提示", function(){
 							if (redirectUrl == "") {
-								location.href = "http://localhost:8092";
+								location.href = "http://localhost:8099";
 							} else {
 								location.href = redirectUrl;
 							}
