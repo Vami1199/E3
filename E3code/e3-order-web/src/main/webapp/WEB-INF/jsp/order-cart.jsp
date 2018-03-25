@@ -30,7 +30,7 @@
 <jsp:include page="commons/header.jsp" />
 <div class="orderMain">
 <form id="orderForm" class="hide" action="/order/create.html" method="post">
-	<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
+	
 	<input type="hidden" name="paymentType" value="2"/>
 	<input type="hidden" name="postFee" value="10"/>
 	<c:forEach items="${cartList }" var="cart" varStatus="status">
@@ -40,8 +40,9 @@
 		<input type="hidden" name="orderItems[${status.index}].price" value="${cart.price}"/>
 		<input type="hidden" name="orderItems[${status.index}].totalFee" value="${cart.price * cart.num}"/>
 		<input type="hidden" name="orderItems[${status.index}].title" value="${cart.title}"/>
-		<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.images[0]}"/>
+		<input type="hidden" name="orderItems[${status.index}].picPath" value="${cart.image}"/>
 	</c:forEach>
+<input type="hidden" name="payment" value="<fmt:formatNumber groupingUsed="false" maxFractionDigits="2" minFractionDigits="2" value="${totalPrice/100 }"/>"/>
 	<input type="hidden" name="orderShipping.receiverName" value="入云龙"/>
 	<input type="hidden" name="orderShipping.receiverMobile" value="15800888888"/>
 	<input type="hidden" name="orderShipping.receiverState" value="北京"/>
@@ -122,7 +123,7 @@
 				<div class="orderPInfo">
 					<div class="pItem">
 						<a href="http://localhost:8086/item/${cart.id}.html" target="_blank">
-						<img src="${cart.images[0] }" style="width: 60px;height: 60px;"/>
+						<img src="${cart.image }" style="width: 60px;height: 60px;"/>
 						</a>
 					</div>
 					<div class="pItem pGoods">
