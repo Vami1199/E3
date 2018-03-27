@@ -22,6 +22,11 @@ public class OrderController {
 	private CartService cartService;
 	@Autowired
 	private OrderService orderService;
+	/**
+	 * 显示购物车
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/order/order-cart")
 	public String showOrderCart(HttpServletRequest request){
 		//取用户id
@@ -37,7 +42,12 @@ public class OrderController {
 		//返回页面
 		return "order-cart";
 	}
-	
+	/**
+	 * 创建订单
+	 * @param orderInfo
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping(value="/order/create",method=RequestMethod.POST)
 	public String createOrder(OrderInfo orderInfo,HttpServletRequest request){
 		//取用户信息

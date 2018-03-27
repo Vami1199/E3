@@ -24,6 +24,7 @@ public class CartServiceImpl implements CartService {
 	private String REDIS_CART_PRE;
 	@Autowired
 	private TbItemMapper tbItemMapper;
+
 	@Override
 	public E3Result addCart(long userId, long itemId, int num) {
 		//向redis中添加购物车。
@@ -53,6 +54,7 @@ public class CartServiceImpl implements CartService {
 		jedisClient.hset(REDIS_CART_PRE + ":" + userId, itemId + "", JsonUtils.objectToJson(item));
 		return E3Result.ok();
 	}
+
 	@Override
 	public E3Result mergeCart(long userId, List<TbItem> itemList) {
 		//遍历商品列表
@@ -66,6 +68,7 @@ public class CartServiceImpl implements CartService {
 		//返回成功
 		return E3Result.ok();
 	}
+	
 	@Override
 	public List<TbItem> getCartList(long userId) {
 		//根据用户id查询购车列表
